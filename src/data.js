@@ -27,7 +27,7 @@ export let initialData = [
         img: 'https://enguide.ua/image.php?width=800&height=500&crop&image=/s/public/upload/images/c1fe/67d6/9bf2/644f/e826/a5c9/a959/a024',
         date: '20 октября 2022',
         comments: [],
-        likeCount: 55,
+        likeCount: 156,
         isLiked: true,
     },
     {
