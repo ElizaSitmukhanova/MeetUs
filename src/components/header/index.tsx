@@ -1,28 +1,19 @@
-import React from 'react'
-import { HeaderContainer, Logo, SearchAndProfile,   } from './styled';
-import { BsSearch, BsFillPersonFill,  } from 'react-icons/bs';
+ import React from 'react'
+import { HeaderContainer, Logo, SearchAndProfile, } from './styled';
+import { BsSearch, BsFillPersonFill, } from 'react-icons/bs';
 
 export const Header = () => {
     const handleClickPerson = () => {
         alert('Человечек');
     };
 
-    return(
+    return (
         <HeaderContainer>
-            <Logo>
-                Meet us
-            </Logo>
-           
-
+            <Logo> Meet us </Logo>
             <SearchAndProfile>
-                <BsFillPersonFill onClick={handleClickPerson}/>
+                <BsFillPersonFill onClick={handleClickPerson} />
                 <BsSearch />
-                
-
             </SearchAndProfile>
-              
-            
         </HeaderContainer>
-
     );
-}
+} 

@@ -1,23 +1,15 @@
 import { generatePath } from "react-router-dom";
 
-
 const getPath = (path: string) => {
-   const pushPath  = (params = {}) => generatePath(`${path}`, params);
-
-   return { path, pushPath};
+   const pushPath = (params = {}) => generatePath(`${path}`, params);
+   return { path, pushPath };
 }
-
 export const PostsUrl = getPath('/posts/:id');
 
-
- 
-
-
 const getUrl = (path: string) => {
-   const pushPath  = (params = {}) => generatePath(`${path}`, params);
+   const pushPath = (params = {}) => generatePath(`${path}`, params);
 
-   return { path, pushPath};
+   return { path, pushPath };
 }
-
 export const UserUrl = getUrl('/posts/:id');
 

@@ -1,5 +1,5 @@
 import { FC, useState, useEffect } from 'react'
-import { Element, TitleDiscContainer, DateContainer, DiscContainer, TitleContainer, CountsContainer, ImageContainer, CommentsInput, CommentsAdd, textarea } from './styles';
+import { Element, TitleDiscContainer, DateContainer, DiscContainer, TitleContainer, CountsContainer, ImageContainer, CommentsInput, CommentsAdd, CommentsBox } from './styles';
 import { useParams } from 'react-router-dom';
 import { initialData } from '../../data';
 import { BsFillSuitHeartFill, BsChat } from 'react-icons/bs';
@@ -47,12 +47,14 @@ export const FullPost: React.FC = () => {
                 {post?.likeCount} <BsFillSuitHeartFill />
                     <span> 50 <BsChat /> </span>
                 </CountsContainer>
-                <CommentsAdd>
+                <CommentsBox>
                     <CommentsInput>
                         <textarea> Написать комментарий </textarea>
                     </CommentsInput>
+                    <CommentsAdd>  
                     <button> Отправить </button>
                 </CommentsAdd>
+                 </CommentsBox>
             </TitleDiscContainer>
         </Element>
     );
