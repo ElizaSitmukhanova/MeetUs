@@ -4,12 +4,6 @@ const getPath = (path: string) => {
    const pushPath = (params = {}) => generatePath(`${path}`, params);
    return { path, pushPath };
 }
+
 export const PostsUrl = getPath('/posts/:id');
-
-const getUrl = (path: string) => {
-   const pushPath = (params = {}) => generatePath(`${path}`, params);
-
-   return { path, pushPath };
-}
-export const UserUrl = getUrl('/posts/:id');
-
+export const UserUrl = getPath('/user/:id');

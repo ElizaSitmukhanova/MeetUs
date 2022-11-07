@@ -10,13 +10,20 @@ export const Body = () => {
     const onPostClick = (id: number ) => {
         navigate(PostsUrl.pushPath({id: id}));
     };
+    const getDescription = (desc: string) => {
+        if (desc.length > 80) {
+            return desc.substring(0, 80) + " ...";
+        } else{
+            return desc;
+        }
+    }
 
     return(
         <Elements>
             {initialData.map((element) => {
                 return(
                     <Block
-                        description={element.description}
+                        description={getDescription(element.description)}
                         title={element.title}
                         img={element.img}
                         date={element.date}

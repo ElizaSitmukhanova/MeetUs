@@ -7,7 +7,6 @@ export let userData = [
          
     },
 
-
     {
         id: 1,
         name: 'Lera',
@@ -47,5 +46,4 @@ export let userData = [
         img: 'https://www.youloveit.ru/uploads/posts/2020-11/1606323514_youloveit_com_disney_princess_wears_masks_profile_pictures09.jpeg',
          
     },
-
 ];
