@@ -7,7 +7,7 @@ export const FooterContainer = styled.div`
     max-width: 80%;
     border-top: 2px solid rgba(188, 143, 143, 1);
     margin:  0 auto;
-    padding-top: 10px;
+    
     padding-bottom: 10px ;
 `;
 

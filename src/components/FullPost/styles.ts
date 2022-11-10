@@ -24,8 +24,7 @@ export const Element = styled.div`
         align-self: center;
 
 `;
- 
- 
+
 export const TitleDiscContainer = styled.div`
     margin: 30px 30px 10px 30px;
     font-family: var(--mdc-typography-font-family, "Nunito", "Helvetica", "Arial", sans-serif);
@@ -39,11 +38,13 @@ export const TitleContainer = styled.div`
     font-family: Comic Sans MS, Comic Sans, cursive;
     font-style: normal;
 `;
+
 export const DateContainer = styled.div`
     margin-top: 5px;
     color: gray;
     font-style: italic;
 `;
+
 export const DiscContainer = styled.div`
     margin-top: 5px;
     font-weight: 450;
@@ -52,10 +53,9 @@ export const DiscContainer = styled.div`
     font-smoothing: antialiased;
     line-height: 1.5;
 `;
+
 export const ImageContainer = styled.div`
  
-}
-   
 
 `;
 export const CountsContainer = styled.div`
@@ -63,7 +63,6 @@ export const CountsContainer = styled.div`
     margin-top: 5px;
     text-align: center; 
     outline: none;
-
 `; 
  
 export const CommentsInput = styled.div`
@@ -72,7 +71,6 @@ export const CommentsInput = styled.div`
     border: 2px solid rgb(188, 143, 143);
     outline: none;
     padding-bottom: 5px;
- 
 `; 
 
 export const CommentsAdd = styled.div`
@@ -85,8 +83,10 @@ export const CommentsAdd = styled.div`
 `; 
 
 export const CommentsBox = styled.div`
- margin-top: 10px;
+    margin-top: 10px;
 `; 
 
-
+export const button = styled.div`
+    margin-top: 10px;
+`;
 

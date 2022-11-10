@@ -17,7 +17,7 @@ export let userData = [
 
     {
         id: 2,
-        name: 'Vera',
+        name: 'Vera ',
         description: 'dsgdsgsdgsdgsdgsdgds ',
         img: 'https://www.youloveit.ru/uploads/posts/2020-11/1606323514_youloveit_com_disney_princess_wears_masks_profile_pictures09.jpeg',
          
@@ -25,8 +25,8 @@ export let userData = [
 
     {
         id: 3,
-        name: 'Lera',
-        description: 'dsgdsgsdgsdgsdgsdgds ',
+        name: 'Даша Кожевникова',
+        description: 'У меня большие проблемы с общением на английском: языковой барьер, нехватка практики, неуверенность. Здесь я хочу найти единоомышленников в "борьбе" с ними! ',
         img: 'https://www.youloveit.ru/uploads/posts/2020-11/1606323514_youloveit_com_disney_princess_wears_masks_profile_pictures09.jpeg',
          
     },

@@ -1,7 +1,8 @@
 import { FC, useState, useEffect } from 'react'
-import { Element, DiscContainer, NameContainer, ImageContainer } from './styled';
+import { Container, ElementOne, ElementTwo, ImageContainer, NameContainer, ButtonContainer, ButtonOne, ButtonTwo, DescContainer, } from './styled';
 import { useNavigate, useParams } from 'react-router-dom';
 import { userData } from '../../users';
+
 
 interface User {
     id: number;
@@ -26,21 +27,31 @@ export const User: React.FC = () => {
     }, [id])
 
     return (
-        <div>
-            <button onClick={handleClickBack} style={{marginLeft: '150px', marginTop: '25px'}}>
+        <Container>
+            <button onClick={handleClickBack} style={{ marginLeft: '150px', marginTop: '25px' }}>
                 Назад
             </button>
-            <Element>
+            <ElementOne>
                 <ImageContainer>
-                    <img src={user?.img} width='70' height="50 px" />
+                    <img src={user?.img} width='120 px' height="120 px" />
                 </ImageContainer>
                 <NameContainer>
                     {user?.name}
                 </NameContainer>
-                <DiscContainer>
+                <ButtonContainer>
+                    <ButtonOne>
+                        Установить статус
+                    </ButtonOne>
+                    <ButtonTwo>
+                        Редактировать профиль
+                    </ButtonTwo>
+                </ButtonContainer>
+            </ElementOne>
+            <ElementTwo>
+                <DescContainer>
                     {user?.description}
-                </DiscContainer>
-            </Element>
-        </div>
+                </DescContainer>
+            </ElementTwo>
+        </Container>
     );
 };
