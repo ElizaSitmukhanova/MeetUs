@@ -25,11 +25,31 @@ export const Element = styled.div`
 
 `;
 
+export const Backbutton = styled.div`
+    color: #6d6e6e;
+    background-color: #e1e4eb;
+    margin: 10px 1290px 0 190px;
+    padding: 9px 20px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 25px;   
+`;
+
+export const ImageContainer = styled.div`
+    margin: auto;
+`;
+
+export const Image = styled.img`
+    width: 350px; 
+    height: 350px;
+    margin: 5px;
+`;
+
 export const TitleDiscContainer = styled.div`
     margin: 30px 30px 10px 30px;
     font-family: var(--mdc-typography-font-family, "Nunito", "Helvetica", "Arial", sans-serif);
     text-align: center; 
-
 `;
 
 export const TitleContainer = styled.div`
@@ -54,15 +74,15 @@ export const DiscContainer = styled.div`
     line-height: 1.5;
 `;
 
-export const ImageContainer = styled.div`
- 
-
-`;
 export const CountsContainer = styled.div`
-    text-align: left;
-    margin-top: 5px;
+    display: flex;
     text-align: center; 
     outline: none;
+    background-color: #f5f5f5;
+    color: #265db5;
+    margin: 10px 400px 15px 45px;
+    padding: 10px 10px;
+    border-radius: 25px;
 `; 
  
 export const CommentsInput = styled.div`
@@ -73,20 +93,40 @@ export const CommentsInput = styled.div`
     padding-bottom: 5px;
 `; 
 
-export const CommentsAdd = styled.div`
-    display: flex;
-    flex-direction: column;
-    background: rgb(188, 143, 143);
-    border: 2px solid rgb(188, 143, 143); 
-    
-
-`; 
-
 export const CommentsBox = styled.div`
-    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 0.1fr 1.7fr 0.2fr;
+    align-item: center;
+`; 
+export const ImageUser = styled.img`
+    margin: 0 5pxs;
+    width: 40px; 
+    height: 40px;
+    border-radius: 60px;
+`;
+
+export const Textarea = styled.textarea`
+    background-color: white;
+    display: inline-block;
+    color: rgba(188,143,143,1);
+    padding: 3px 3px;
+    margin: 0 5px;
+    font: 13px Arial, sans-serif;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 1px solid #a7a8a8;
+    outline: none
 `; 
 
-export const button = styled.div`
-    margin-top: 10px;
-`;
+export const Button = styled.button`
+    margin: auto;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: rgba(188,143,143,1);
+    border-radius: 6px;
+`; 
+
+
+ 
 

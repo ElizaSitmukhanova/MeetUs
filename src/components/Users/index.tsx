@@ -1,7 +1,8 @@
 import { FC, useState, useEffect } from 'react'
-import { Container, ElementOne, ElementTwo, ImageContainer, NameContainer, ButtonContainer, ButtonOne, ButtonTwo, DescContainer, } from './styled';
+import { Backbutton, ElementOne, ElementTwo, ImageContainer, NameContainer, ButtonContainer, Button, DescContainer, Image, CountsContainer, LikeContainer, ChatContainer } from './styled';
 import { useNavigate, useParams } from 'react-router-dom';
 import { userData } from '../../users';
+import { BsArrowLeft, BsFillSuitHeartFill, BsChat } from 'react-icons/bs';
 
 
 interface User {
@@ -27,31 +28,39 @@ export const User: React.FC = () => {
     }, [id])
 
     return (
-        <Container>
-            <button onClick={handleClickBack} style={{ marginLeft: '150px', marginTop: '25px' }}>
-                Назад
-            </button>
+        <>
+            <Backbutton onClick={handleClickBack}>
+                <BsArrowLeft />
+            </Backbutton>
             <ElementOne>
                 <ImageContainer>
-                    <img src={user?.img} width='120 px' height="120 px" />
+                    <Image src={user?.img} />
                 </ImageContainer>
                 <NameContainer>
                     {user?.name}
                 </NameContainer>
                 <ButtonContainer>
-                    <ButtonOne>
+                    <Button>
                         Установить статус
-                    </ButtonOne>
-                    <ButtonTwo>
+                    </Button>
+                    <Button>
                         Редактировать профиль
-                    </ButtonTwo>
+                    </Button>
                 </ButtonContainer>
             </ElementOne>
             <ElementTwo>
                 <DescContainer>
                     {user?.description}
                 </DescContainer>
+                <CountsContainer>
+                    < LikeContainer>
+                        <BsFillSuitHeartFill /> 50
+                    </LikeContainer>
+                    <ChatContainer>
+                        <BsChat /> 150
+                    </ChatContainer>
+                </CountsContainer>
             </ElementTwo>
-        </Container>
+        </>
     );
 };

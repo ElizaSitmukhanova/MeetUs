@@ -1,8 +1,8 @@
 import { FC, useState, useEffect } from 'react'
-import { Element, TitleDiscContainer, DateContainer, DiscContainer, TitleContainer, CountsContainer, ImageContainer, CommentsInput, CommentsAdd, CommentsBox } from './styles';
+import { Backbutton, Element, Image, TitleDiscContainer, DateContainer, DiscContainer, TitleContainer, CountsContainer, ImageContainer, CommentsBox, ImageUser, Textarea, Button } from './styles';
 import { useParams } from 'react-router-dom';
 import { initialData } from '../../data';
-import { BsFillSuitHeartFill, BsChat } from 'react-icons/bs';
+import { BsArrowLeft, BsFillSuitHeartFill, BsChat, BsCheck2 } from 'react-icons/bs';
 import { useNavigate } from 'react-router-dom';
 
 interface Post {
@@ -18,7 +18,7 @@ interface Post {
 
 export const FullPost: React.FC = () => {
     const [post, setPost] = useState<Post>()
-    const [likeCount, setLikeCount] = useState<number|undefined>(undefined);
+    const [likeCount, setLikeCount] = useState<number | undefined>(undefined);
     const { id } = useParams();
     const navigate = useNavigate();
 
@@ -40,12 +40,12 @@ export const FullPost: React.FC = () => {
     }
     return (
         <div>
-            <button onClick={handleClickBack} style={{marginLeft: '150px', marginTop: '25px'}}>
-                Назад
-            </button>
+            <Backbutton onClick={handleClickBack}>
+                <BsArrowLeft />
+            </Backbutton>
             <Element>
                 <ImageContainer>
-                    <img src={post?.img} width="50%" height="90%" />
+                    <Image src={post?.img} />
                 </ImageContainer>
                 <TitleDiscContainer>
                     <TitleContainer>
@@ -58,21 +58,20 @@ export const FullPost: React.FC = () => {
                         {post?.description}
                     </DiscContainer>
                     <CountsContainer>
-                    {likeCount} <BsFillSuitHeartFill onClick={handleClickLike} />
-                       {/*  <span> 50 <BsChat /> </span> */}
+                        {likeCount} <BsFillSuitHeartFill onClick={handleClickLike} />
+                        {/*  <span> 50 <BsChat /> </span> */}
                     </CountsContainer>
                     <CommentsBox>
-                        <CommentsInput>
-                            <textarea> Написать комментарий </textarea>
-                        </CommentsInput>
-                        <CommentsAdd>  
-                        <button> Отправить </button>
-                    </CommentsAdd>
+                        <ImageUser src='https://www.youloveit.ru/uploads/posts/2020-11/1606323514_youloveit_com_disney_princess_wears_masks_profile_pictures09.jpeg' />
+                        <Textarea> Написать комментарий... </Textarea>
+                        <Button>
+                            <BsCheck2 size={'2em'} />
+                        </Button>
                     </CommentsBox>
                 </TitleDiscContainer>
             </Element>
         </div>
-        
+
     );
 };
 
