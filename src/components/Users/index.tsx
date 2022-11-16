@@ -10,10 +10,12 @@ interface User {
     name: string;
     description: string;
     img: string;
+    likeCount: number;
 };
 
 export const User: React.FC = () => {
     const [user, setUser] = useState<User>()
+    const [likeCount, setLikeCount] = useState<number | undefined>(undefined);
     const { id } = useParams();
     const navigate = useNavigate();
 
@@ -24,9 +26,17 @@ export const User: React.FC = () => {
     useEffect(() => {
         //Будто запрос в бэк
         const item = userData.filter(data => data.id.toString() === id)[0];
+        setLikeCount(item.likeCount);
         setUser(item);
     }, [id])
 
+    const handleClickLike = () => {
+        if (likeCount !== undefined) {
+            setLikeCount((likeCount) => likeCount && likeCount + 1)
+        }
+    } 
+
+ 
     return (
         <>
             <Backbutton onClick={handleClickBack}>
@@ -54,7 +64,7 @@ export const User: React.FC = () => {
                 </DescContainer>
                 <CountsContainer>
                     < LikeContainer>
-                        <BsFillSuitHeartFill /> 50
+                    {likeCount} <BsFillSuitHeartFill onClick={handleClickLike} /> 
                     </LikeContainer>
                     <ChatContainer>
                         <BsChat /> 150

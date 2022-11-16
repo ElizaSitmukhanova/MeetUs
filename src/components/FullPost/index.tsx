@@ -1,5 +1,5 @@
 import { FC, useState, useEffect } from 'react'
-import { Backbutton, Element, Image, TitleDiscContainer, DateContainer, DiscContainer, TitleContainer, CountsContainer, ImageContainer, CommentsBox, ImageUser, Textarea, Button } from './styles';
+import { Backbutton, Element, Image, TitleDiscContainer, DateContainer, DiscContainer, TitleContainer, CountsContainer, ImageContainer, CommentsInput, CommentsBox, ImageUser, Textarea, Button } from './styles';
 import { useParams } from 'react-router-dom';
 import { initialData } from '../../data';
 import { BsArrowLeft, BsFillSuitHeartFill, BsChat, BsCheck2 } from 'react-icons/bs';
@@ -15,6 +15,7 @@ interface Post {
     likeCount: number;
     isLiked: boolean;
 };
+
 
 export const FullPost: React.FC = () => {
     const [post, setPost] = useState<Post>()
@@ -38,6 +39,7 @@ export const FullPost: React.FC = () => {
             setLikeCount((likeCount) => likeCount && likeCount + 1)
         }
     }
+
     return (
         <div>
             <Backbutton onClick={handleClickBack}>
@@ -61,13 +63,18 @@ export const FullPost: React.FC = () => {
                         {likeCount} <BsFillSuitHeartFill onClick={handleClickLike} />
                         {/*  <span> 50 <BsChat /> </span> */}
                     </CountsContainer>
+
                     <CommentsBox>
+                          
+                    </CommentsBox>
+
+                    <CommentsInput>
                         <ImageUser src='https://www.youloveit.ru/uploads/posts/2020-11/1606323514_youloveit_com_disney_princess_wears_masks_profile_pictures09.jpeg' />
                         <Textarea> Написать комментарий... </Textarea>
                         <Button>
                             <BsCheck2 size={'2em'} />
                         </Button>
-                    </CommentsBox>
+                    </CommentsInput>
                 </TitleDiscContainer>
             </Element>
         </div>

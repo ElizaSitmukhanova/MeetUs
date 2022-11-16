@@ -85,15 +85,15 @@ export const CountsContainer = styled.div`
     border-radius: 25px;
 `; 
  
-export const CommentsInput = styled.div`
-    display: flex;
+export const CommentsBox  = styled.div`
+   /*  display: flex;
     flex-direction: column;
     border: 2px solid rgb(188, 143, 143);
     outline: none;
-    padding-bottom: 5px;
+    padding-bottom: 5px; */
 `; 
 
-export const CommentsBox = styled.div`
+export const CommentsInput = styled.div`
     display: grid;
     grid-template-columns: 0.1fr 1.7fr 0.2fr;
     align-item: center;
