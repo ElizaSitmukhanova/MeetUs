@@ -1,5 +1,5 @@
 import { FC, useState, useEffect } from 'react'
-import { Backbutton, Element, Image, TitleDiscContainer, DateContainer, DiscContainer, TitleContainer, CountsContainer, ImageContainer, CommentsInput, CommentsBox, TextBox, UserName, Comments, ImageUser, Textarea, Button } from './styles';
+import { Backbutton, Element, Image, TitleDiscContainer, DateContainer, DiscContainer, TitleContainer, CountsContainer, ImageContainer, ResponseForm, CommentTime, ResponseButton, CommentsInput, CommentsBox, TextBox, UserName, Comments, ImageUser, Textarea, Button } from './styles';
 import { useParams } from 'react-router-dom';
 import { initialData } from '../../data';
 import { BsArrowLeft, BsFillSuitHeartFill, BsChat, BsChevronCompactRight } from 'react-icons/bs';
@@ -68,20 +68,28 @@ export const FullPost: React.FC = () => {
                         <TextBox>
                             <UserName> Дуайт Шрут </UserName>
                             <Comments> Я обязательно буду участвовать! После прошлого участия я все еще под впечатлением! </Comments>
+                            <ResponseForm>
+                                <CommentTime> Вчера в 17:30 </CommentTime>
+                                <ResponseButton> Ответить </ResponseButton>
+                            </ResponseForm>
                         </TextBox>
-                    </CommentsBox>
-                    <CommentsBox>
                         <ImageUser src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGNdX-Kyr4wlX5voOKTpRSbX3ihAdDhTjOYQ&usqp=CAU' />
                         <TextBox>
                             <UserName> Майкл Скотт </UserName>
                             <Comments> Да, думаю, я тоже присоединюсь! </Comments>
+                            <ResponseForm>
+                                <CommentTime> Сегодня в 8:00 </CommentTime>
+                                <ResponseButton> Ответить </ResponseButton>
+                            </ResponseForm>
                         </TextBox>
-                    </CommentsBox>
-                    <CommentsBox>
                         <ImageUser src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkGiaHmI46iZ0g7ozYHx7O1_7CBaRwiC0gzgjnxVa3eAnTxFsvBB2r3eheOdIHu0mSeVQ&usqp=CAU' />
                         <TextBox>
                             <UserName> Пэм Бисли </UserName>
                             <Comments> Я тоже с вами! </Comments>
+                            <ResponseForm>
+                                <CommentTime> 5 минут назад </CommentTime>
+                                <ResponseButton> Ответить </ResponseButton>
+                            </ResponseForm>
                         </TextBox>
                     </CommentsBox>
                     <CommentsInput>

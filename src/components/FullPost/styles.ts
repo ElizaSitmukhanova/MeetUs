@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Element = styled.div`
-    margin: 40px 250px;
+    margin: 40px 300px;
     padding: 20px 0 20px 20px;
     text-align: center;
     display: grid;
@@ -22,18 +22,20 @@ export const Element = styled.div`
     @media screen and (max-width: 500px) {
         grid-template-columns: repeat(1, 450px);
         align-self: center;
-
 `;
 
 export const Backbutton = styled.div`
     color: #6d6e6e;
     background-color: #e1e4eb;
     margin: 10px 1290px 0 190px;
+    height: 20px;
+    width: 25px;
     padding: 9px 20px;
     cursor: pointer;
     border: none;
     outline: none;
-    border-radius: 25px;   
+    border-radius: 25px; 
+    text-align: center;  
 `;
 
 export const ImageContainer = styled.div`
@@ -41,8 +43,8 @@ export const ImageContainer = styled.div`
 `;
 
 export const Image = styled.img`
-    width: 350px; 
-    height: 350px;
+    width: 300px; 
+    height: 300px;
     margin: 5px;
 `;
 
@@ -89,13 +91,13 @@ export const CommentsBox  = styled.div`
     display: grid;
     grid-template-columns: 0.1fr 1.9fr ;
     align-item: center;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
 `; 
 
 export const TextBox  = styled.div`
-    margin: 0 5px 10px 15px;
+    margin: 0 5px 15px 15px;
     text-align: left;
-    font: Helvetica, Arial, sans-serif;;
+    font: Helvetica, Arial, sans-serif;
 `; 
 export const UserName  = styled.div`
    color:  #25629c;
@@ -106,6 +108,24 @@ export const UserName  = styled.div`
 
 export const Comments  = styled.div`
    font-size: 14px;
+`;
+
+export const ResponseForm  = styled.div`
+   display: flex;
+   font-size: 13px;
+`;
+
+export const CommentTime  = styled.div`
+   margin-top: 1px;
+   color: #636161;
+`;
+
+export const ResponseButton  = styled.button`
+   cursor: pointer;
+   border: none;
+   outline: none;
+   background-color: white;
+   color: #4763a8;
 `;
 
 export const CommentsInput = styled.div`
@@ -144,6 +164,8 @@ export const Button = styled.button`
     border-radius: 6px;
     color: #575959;
     background-color: #ebe9e8;
+    height: 30px;
+    width: 30px;
 `;  
 
 

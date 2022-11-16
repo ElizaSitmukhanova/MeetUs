@@ -4,12 +4,15 @@ import styled from 'styled-components';
 export const Backbutton = styled.div`
     color: #6d6e6e;
     background-color: #e1e4eb;
+    height: 20px;
+    width: 25px;
     margin: 10px 1290px 0 190px;
     padding: 9px 20px;
     cursor: pointer;
     border: none;
     outline: none;
     border-radius: 25px;   
+    text-align: center;
 `;
 
 export const ElementOne = styled.div`
