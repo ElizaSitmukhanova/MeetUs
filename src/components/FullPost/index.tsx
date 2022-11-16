@@ -1,8 +1,8 @@
 import { FC, useState, useEffect } from 'react'
-import { Backbutton, Element, Image, TitleDiscContainer, DateContainer, DiscContainer, TitleContainer, CountsContainer, ImageContainer, CommentsInput, CommentsBox, ImageUser, Textarea, Button } from './styles';
+import { Backbutton, Element, Image, TitleDiscContainer, DateContainer, DiscContainer, TitleContainer, CountsContainer, ImageContainer, CommentsInput, CommentsBox, TextBox, UserName, Comments, ImageUser, Textarea, Button } from './styles';
 import { useParams } from 'react-router-dom';
 import { initialData } from '../../data';
-import { BsArrowLeft, BsFillSuitHeartFill, BsChat, BsCheck2 } from 'react-icons/bs';
+import { BsArrowLeft, BsFillSuitHeartFill, BsChat, BsChevronCompactRight } from 'react-icons/bs';
 import { useNavigate } from 'react-router-dom';
 
 interface Post {
@@ -63,22 +63,39 @@ export const FullPost: React.FC = () => {
                         {likeCount} <BsFillSuitHeartFill onClick={handleClickLike} />
                         {/*  <span> 50 <BsChat /> </span> */}
                     </CountsContainer>
-
                     <CommentsBox>
-                          
+                        <ImageUser src='https://kartinkof.club/uploads/posts/2022-03/1648322544_20-kartinkof-club-p-serial-ofis-memi-20.jpg' />
+                        <TextBox>
+                            <UserName> Дуайт Шрут </UserName>
+                            <Comments> Я обязательно буду участвовать! После прошлого участия я все еще под впечатлением! </Comments>
+                        </TextBox>
                     </CommentsBox>
-
+                    <CommentsBox>
+                        <ImageUser src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGNdX-Kyr4wlX5voOKTpRSbX3ihAdDhTjOYQ&usqp=CAU' />
+                        <TextBox>
+                            <UserName> Майкл Скотт </UserName>
+                            <Comments> Да, думаю, я тоже присоединюсь! </Comments>
+                        </TextBox>
+                    </CommentsBox>
+                    <CommentsBox>
+                        <ImageUser src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkGiaHmI46iZ0g7ozYHx7O1_7CBaRwiC0gzgjnxVa3eAnTxFsvBB2r3eheOdIHu0mSeVQ&usqp=CAU' />
+                        <TextBox>
+                            <UserName> Пэм Бисли </UserName>
+                            <Comments> Я тоже с вами! </Comments>
+                        </TextBox>
+                    </CommentsBox>
                     <CommentsInput>
                         <ImageUser src='https://www.youloveit.ru/uploads/posts/2020-11/1606323514_youloveit_com_disney_princess_wears_masks_profile_pictures09.jpeg' />
-                        <Textarea> Написать комментарий... </Textarea>
+                        <Textarea>
+                            Написать комментарий...
+                        </Textarea>
                         <Button>
-                            <BsCheck2 size={'2em'} />
+                            <BsChevronCompactRight size={'2em'} />
                         </Button>
                     </CommentsInput>
                 </TitleDiscContainer>
             </Element>
         </div>
-
     );
 };
 

@@ -34,9 +34,8 @@ export const User: React.FC = () => {
         if (likeCount !== undefined) {
             setLikeCount((likeCount) => likeCount && likeCount + 1)
         }
-    } 
+    }
 
- 
     return (
         <>
             <Backbutton onClick={handleClickBack}>
@@ -64,7 +63,7 @@ export const User: React.FC = () => {
                 </DescContainer>
                 <CountsContainer>
                     < LikeContainer>
-                    {likeCount} <BsFillSuitHeartFill onClick={handleClickLike} /> 
+                        {likeCount} <BsFillSuitHeartFill onClick={handleClickLike} />
                     </LikeContainer>
                     <ChatContainer>
                         <BsChat /> 150

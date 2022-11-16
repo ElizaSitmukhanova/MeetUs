@@ -86,18 +86,34 @@ export const CountsContainer = styled.div`
 `; 
  
 export const CommentsBox  = styled.div`
-   /*  display: flex;
-    flex-direction: column;
-    border: 2px solid rgb(188, 143, 143);
-    outline: none;
-    padding-bottom: 5px; */
+    display: grid;
+    grid-template-columns: 0.1fr 1.9fr ;
+    align-item: center;
+    margin-bottom: 5px;
 `; 
+
+export const TextBox  = styled.div`
+    margin: 0 5px 10px 15px;
+    text-align: left;
+    font: Helvetica, Arial, sans-serif;;
+`; 
+export const UserName  = styled.div`
+   color:  #25629c;
+   font-weight: bold;
+   margin-bottom: 3px;
+   font-size: 13px;
+`;
+
+export const Comments  = styled.div`
+   font-size: 14px;
+`;
 
 export const CommentsInput = styled.div`
     display: grid;
     grid-template-columns: 0.1fr 1.7fr 0.2fr;
     align-item: center;
 `; 
+
 export const ImageUser = styled.img`
     margin: 0 5pxs;
     width: 40px; 
@@ -108,13 +124,15 @@ export const ImageUser = styled.img`
 export const Textarea = styled.textarea`
     background-color: white;
     display: inline-block;
-    color: rgba(188,143,143,1);
-    padding: 3px 3px;
-    margin: 0 5px;
+    color: #868787;
+    text-align: left;
+    height: 30px;
+    width: 400px;
+    margin: 3px 15px;
     font: 13px Arial, sans-serif;
     border-radius: 6px;
     cursor: pointer;
-    border: 1px solid #a7a8a8;
+    border: 1px solid #e3e2e1;
     outline: none
 `; 
 
@@ -123,9 +141,10 @@ export const Button = styled.button`
     cursor: pointer;
     border: none;
     outline: none;
-    background-color: rgba(188,143,143,1);
     border-radius: 6px;
-`; 
+    color: #575959;
+    background-color: #ebe9e8;
+`;  
 
 
  
