@@ -20,7 +20,7 @@ export const Logo = styled.div`
 `;
 
 export const SearchAndProfile = styled.div`
-    width: 10%;
+    width: 70px;
     display: flex;
     align-items:  center;
     flex-direction: row;

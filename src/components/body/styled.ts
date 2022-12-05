@@ -11,6 +11,7 @@ import styled from 'styled-components';
 
     @media screen and (max-width: 1400px) {
         grid-template-columns: repeat(2, 450px);
+        align-self: center;
     }
 
     @media screen and (max-width: 960px) {
