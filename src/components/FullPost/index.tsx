@@ -1,7 +1,6 @@
 import { FC, useState, useEffect } from 'react'
 import { Backbutton, Element, Image, TitleDiscContainer, DateContainer, DiscContainer, TitleContainer, CountsContainer, ImageContainer, ResponseForm, CommentTime, ResponseButton, CommentsInput, CommentsBox, TextBox, UserName, Comments, ImageUser, Textarea, Button } from './styles';
 import { useParams } from 'react-router-dom';
-import { initialData } from '../../data';
 import { BsArrowLeft, BsFillSuitHeartFill, BsChat, BsChevronCompactRight } from 'react-icons/bs';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';

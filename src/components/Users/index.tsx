@@ -1,7 +1,6 @@
 import { FC, useState, useEffect } from 'react'
 import { Backbutton, ElementOne, ElementTwo, ImageContainer, NameContainer, ButtonContainer, Button, DescContainer, Image, CountsContainer, LikeContainer, ChatContainer } from './styled';
 import { useNavigate, useParams } from 'react-router-dom';
-import { userData } from '../../users';
 import { BsArrowLeft, BsFillSuitHeartFill, BsChat } from 'react-icons/bs';
 import axios from 'axios';
 
@@ -28,7 +27,9 @@ export const User: React.FC = () => {
             res=>{ setUser(res.data);
                 console.log(res.data)
         // setLikeCount(res.data);
-    })}, [id])
+    }
+    )
+}, [id])
 
     const handleClickLike = () => {
         if (likeCount !== undefined) {

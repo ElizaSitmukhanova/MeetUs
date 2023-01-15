@@ -1,7 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState} from 'react';
 import { useNavigate } from 'react-router-dom';
-import { initialData } from '../../data';
 import { PostsUrl } from '../../utils/roter';
 import { Block } from './Block';
 import { Elements } from './styled';
@@ -11,7 +10,6 @@ export const Body = () => {
     const navigate = useNavigate();
     const [dataFromApi, setDataFromApi] = useState(Array<PostType>);
     useEffect(() => {
-        // Update the document title using the browser API
         axios.get(`http://localhost:5000/api/posts`).then(
             res=>{
                 setDataFromApi(res.data);
