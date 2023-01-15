@@ -3,7 +3,7 @@ import { Backbutton, ElementOne, ElementTwo, ImageContainer, NameContainer, Butt
 import { useNavigate, useParams } from 'react-router-dom';
 import { userData } from '../../users';
 import { BsArrowLeft, BsFillSuitHeartFill, BsChat } from 'react-icons/bs';
-
+import axios from 'axios';
 
 interface User {
     id: number;
@@ -24,11 +24,11 @@ export const User: React.FC = () => {
     };
 
     useEffect(() => {
-        //Будто запрос в бэк
-        const item = userData.filter(data => data.id.toString() === id)[0];
-        setLikeCount(item.likeCount);
-        setUser(item);
-    }, [id])
+        axios.get(`http://localhost:5000/api/profile/${id}`).then(
+            res=>{ setUser(res.data);
+                console.log(res.data)
+        // setLikeCount(res.data);
+    })}, [id])
 
     const handleClickLike = () => {
         if (likeCount !== undefined) {

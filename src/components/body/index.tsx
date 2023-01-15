@@ -1,12 +1,24 @@
+import axios from 'axios';
+import { useEffect, useState} from 'react';
 import { useNavigate } from 'react-router-dom';
 import { initialData } from '../../data';
 import { PostsUrl } from '../../utils/roter';
 import { Block } from './Block';
 import { Elements } from './styled';
+import { PostType } from './types';
 
 export const Body = () => {
     const navigate = useNavigate();
-
+    const [dataFromApi, setDataFromApi] = useState(Array<PostType>);
+    useEffect(() => {
+        // Update the document title using the browser API
+        axios.get(`http://localhost:5000/api/posts`).then(
+            res=>{
+                setDataFromApi(res.data);
+                console.log(res.data)
+            }
+        )
+      },[]);
     const onPostClick = (id: number ) => {
         navigate(PostsUrl.pushPath({id: id}));
     };
@@ -20,14 +32,14 @@ export const Body = () => {
 
     return(
         <Elements>
-            {initialData.map((element) => {
+            {dataFromApi?.map((element) => {
                 return(
                     <Block
-                        description={getDescription(element.description)}
-                        title={element.title}
-                        img={element.img}
-                        date={element.date}
-                        id={element.id}
+                        description={getDescription(element?.description)}
+                        title={element?.title}
+                        img={element?.img}
+                        date={"25.06"}
+                        id={element?.id}
                         onPostClick={onPostClick}
                     />
                 );

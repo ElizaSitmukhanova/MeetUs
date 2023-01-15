@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import { initialData } from '../../data';
 import { BsArrowLeft, BsFillSuitHeartFill, BsChat, BsChevronCompactRight } from 'react-icons/bs';
 import { useNavigate } from 'react-router-dom';
-
+import axios from 'axios';
 interface Post {
     id: number;
     title: string;
@@ -28,11 +28,16 @@ export const FullPost: React.FC = () => {
     };
 
     useEffect(() => {
-        //Будто запрос в бэк
-        const item = initialData.filter(data => data.id.toString() === id)[0];
-        setLikeCount(item.likeCount);
-        setPost(item);
-    }, [id])
+        axios.get(`http://localhost:5000/api/posts/${id}`).then(
+            res=>{
+               // setLikeCount(res.data);
+                setPost(res.data);
+            }
+        )
+    }, [id]);
+
+
+  
 
     const handleClickLike = () => {
         if (likeCount !== undefined) {
