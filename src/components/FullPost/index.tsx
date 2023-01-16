@@ -42,7 +42,7 @@ export const FullPost: React.FC = () => {
         if (likeCount !== undefined) {
             setLikeCount((likeCount) => likeCount && likeCount + 1)
         }
-    }
+    };
 
     return (
         <div>
