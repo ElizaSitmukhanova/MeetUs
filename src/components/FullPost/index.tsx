@@ -15,7 +15,6 @@ interface Post {
     isLiked: boolean;
 };
 
-
 export const FullPost: React.FC = () => {
     const [post, setPost] = useState<Post>()
     const [likeCount, setLikeCount] = useState<number | undefined>(undefined);
@@ -34,9 +33,6 @@ export const FullPost: React.FC = () => {
             }
         )
     }, [id]);
-
-
-  
 
     const handleClickLike = () => {
         if (likeCount !== undefined) {

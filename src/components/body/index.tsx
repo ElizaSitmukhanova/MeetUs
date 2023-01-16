@@ -36,7 +36,7 @@ export const Body = () => {
                         description={getDescription(element?.description)}
                         title={element?.title}
                         img={element?.img}
-                        date={"25.06"}
+                        date={element?.date}
                         id={element?.id}
                         onPostClick={onPostClick}
                     />

@@ -3,6 +3,7 @@ export interface PostType{
     title: string;
     description: string;
     img: string;
+    date: string;
     comments: Array<CommentType>;
     likeCount: number;
     isLiked: boolean;
